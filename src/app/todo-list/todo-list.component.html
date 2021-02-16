@@ -1,0 +1,22 @@
+<header>
+  <h1>Todo List</h1>
+</header>
+
+<form #filterForm="ngForm" (input)="setSearchTerm(filterForm)">
+  <label for="term">Filter your to-dos</label>
+  <input type="text" id="term" name="term" ngModel />
+</form>
+
+<ul>
+  <li *ngFor="let todo of todos" class="todo-container">
+    <p>task:{{ todo.task }}</p>
+    <p>completed:{{ todo.completed }}</p>
+    <button class="delete" (click)="deleteTodo(i)">X</button>
+  </li>
+</ul>
+
+<form>
+  <label for="task">Add to your todo list!</label>
+  <input type="text" id="task" name="task" />
+  <button>Add</button>
+</form>

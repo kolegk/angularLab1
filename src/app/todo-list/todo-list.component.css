@@ -1,0 +1,11 @@
+.delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  padding: 0;
+}
+
+.todo-container {
+  position: relative;
+}
